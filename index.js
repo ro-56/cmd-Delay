@@ -35,17 +35,17 @@ CMDDelay.prototype._setOn = function(on, callback) {
     clearTimeout(this.Timer);
     this.Timer = setTimeout(function() {
       this._service.getCharacteristic(Characteristic.On).setValue(false, undefined)
-      
+    }.bind(this), this.delayTime);
+    }
+   else { 
+   clearTimeout(this.Timer);
+    
       var cmd = this.on_cmd;
       var that = this;
       if (cmd) {
       exec(cmd, function(error, stdout, stderr) {
       });
       }
-    }.bind(this), this.delayTime);
-    }
-   else { 
-   clearTimeout(this.Timer);
   }
   
   callback();
