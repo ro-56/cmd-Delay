@@ -41,10 +41,10 @@ PluginTeste.prototype._setOn = function(on, callback) {
       if (cmd) {
       exec(cmd, function(error, stdout, stderr) {
       });
-      
-    }bind(this), this.delayTime;
-  }
-  else { 
+      }
+    }.bind(this), this.delayTime);
+    }
+   else { 
    clearTimeout(this.Timer);
   }
   
