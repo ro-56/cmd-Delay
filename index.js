@@ -1,5 +1,6 @@
 "use strict";
 
+var exec = require("child_process").exec;
 var Service, Characteristic;
 
 module.exports = function(homebridge) {
@@ -19,7 +20,6 @@ function PluginTeste(log, config) {
   this._service.getCharacteristic(Characteristic.On)
     .on('set', this._setOn.bind(this));
   this.on_cmd = config.on_cmd || "";
-  this.state_cmd = config.state_cmd || "";
   this.manufacturer = config.manufacturer;
   this.model = config.model;
   this.serial = config.serial;
