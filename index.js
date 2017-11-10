@@ -33,19 +33,20 @@ CMDDelay.prototype._setOn = function(on, callback) {
  this.log("Setting switch to " + on);
  if (on == 1) {
     clearTimeout(this.Timer);
+  
+  var cmd = this.on_cmd;
+      var that = this;
+      if (cmd) {
+      exec(cmd, function(error, stdout, stderr) {
+      });
+      }
+  
     this.Timer = setTimeout(function() {
       this._service.getCharacteristic(Characteristic.On).setValue(false, undefined)
     }.bind(this), this.delayTime);
     }
    else { 
    clearTimeout(this.Timer);
-    
-      var cmd = this.on_cmd;
-      var that = this;
-      if (cmd) {
-      exec(cmd, function(error, stdout, stderr) {
-      });
-      }
   }
   
   callback();
