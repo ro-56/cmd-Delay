@@ -3,17 +3,17 @@
 ## Example config.json:
 
  ```
-   "accessories": [
-   {
-      "accessory": "cmdDelay",
-      "name" : "Delay Switch",
-      "cmd": "echo 'Hi' > test.txt",
-      "delay": 5000,
-      "manufacturer": "XXXXXX",
-      "model": "RPI-10000A",
-      "serial": "0002-0001"
-	}
-	]
+  "accessories": [
+    {
+       "accessory": "cmdDelay",
+       "name" : "Delay Switch",
+       "cmd": "echo 'Hi' > test.txt",
+       "delay": 5000,
+       "manufacturer": "XXXXXX",
+       "model": "RPI-10000A",
+       "serial": "0002-0001"
+    }
+]
 ```
 
 ## Why do we need this plugin?
@@ -28,7 +28,7 @@ Basically, all you need to do is:
 
 ## How to install
 
- ```sudo npm install -g ```
+ ```sudo npm install -g https://github.com/ro-56/homebridge-cmd-Delay.git```
  
 ## Credits
-This plugin was forked from and inspired by homebridge-dummy by @nfarina
+This plugin was forked from and inspired by homebridge-delay-switch by nitaybz and by homebridge-cmdswitch by luisiam.
