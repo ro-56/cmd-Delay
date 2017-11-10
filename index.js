@@ -43,12 +43,12 @@ DelaySwitch.prototype._setOn = function(on, callback) {
         // Error detection
         if (error) {
           that.log(stderr);
-          that.log("Failed to turn on"));
+          that.log("Failed to turn on");
         } else {
-          that.log("Turned on"));
+          that.log("Turned on");
           error = null;
         }
-      });
+      };
       
     }.bind(this), this.delayTime);
   }
