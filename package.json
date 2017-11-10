@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-plugin_teste",
+  "name": "homebridge-cmd-Delay",
   "version": "0.0.1",
   "description": "Delay switches with cmd for Homebridge: https://github.com/nfarina/homebridge",
   "license": "ISC",
@@ -9,10 +9,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/ro-56/plugin_teste.git"
+    "url": "git://github.com/ro-56/cmd-Delay.git"
   },
   "bugs": {
-    "url": "https://github.com/ro-56/plugin_teste.git/issues"
+    "url": "https://github.com/ro-56/cmd-Delay.git/issues"
   },
   "engines": {
     "node": ">=0.12.0",
