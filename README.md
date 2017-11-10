@@ -1,30 +1,34 @@
-# plugin_teste
+# "cmd-Delay Switches" Plugin
 
-Delay in miliseconds.
+## Example config.json:
 
-
-
-{
-   "bridge": {
-   	"name": "Homebridge",
-   	"username": "C1:38:5A:AC:39:30",
-   	"port": 51826,
-   	"pin": "031-45-154",
-   	"model": "RPI-10000A",
-   	"manufacturer": "XXXXXX"
-   	
-   },
-   "description": "This is an example configuration for the Everything Homebridge plugin",
+ ```
    "accessories": [
-  {
-   		"accessory": "cmdDelay",
-  		"name" : "Delay Switch",
-   		"cmd": "echo 'Hi' > test.txt",
-   		"delay": 5000,
-		  "manufacturer": "XXXXXX",
-   		"model": "RPI-10000A",
-   		"serial": "0002-0001"
-	}],
-  
-  "platforms": []
-}
+   {
+      "accessory": "cmdDelay",
+      "name" : "Delay Switch",
+      "cmd": "echo 'Hi' > test.txt",
+      "delay": 5000,
+      "manufacturer": "XXXXXX",
+      "model": "RPI-10000A",
+      "serial": "0002-0001"
+	}
+	]
+```
+
+## Why do we need this plugin?
+
+
+## How it works
+
+Basically, all you need to do is:
+1. Set the desired delay time in the config file (in milliseconds).
+2. Use this switch in any scene or automation.
+3. Set an automation to trigger when this switch is turned off.
+
+## How to install
+
+ ```sudo npm install -g ```
+ 
+## Credits
+This plugin was forked from and inspired by homebridge-dummy by @nfarina
