@@ -48,7 +48,7 @@ DelaySwitch.prototype._setOn = function(on, callback) {
           that.log("Turned on");
           error = null;
         }
-      };
+      });
       
     }.bind(this), this.delayTime);
   }
