@@ -8,10 +8,10 @@ module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
   
-  homebridge.registerAccessory("homebridge-plugin_teste", "PTESTE", PluginTeste);
+  homebridge.registerAccessory("homebridge-cmd-delay", "cmdDelay", CMDDelay);
 }
 
-function PluginTeste(log, config) {
+function CMDDelay(log, config) {
   this.log = log;
   this.name = config.name;
   this.delayTime = config.delay;
@@ -19,17 +19,17 @@ function PluginTeste(log, config) {
   this._service = new Service.Switch(this.name);
   this._service.getCharacteristic(Characteristic.On)
     .on('set', this._setOn.bind(this));
-  this.on_cmd = config.on_cmd || "";
+  this.on_cmd = config.cmd || "";
   this.manufacturer = config.manufacturer;
   this.model = config.model;
   this.serial = config.serial;
 }
 
-PluginTeste.prototype.getServices = function() {
+CMDDelay.prototype.getServices = function() {
   return [this._service];
 }
 
-PluginTeste.prototype._setOn = function(on, callback) {
+CMDDelay.prototype._setOn = function(on, callback) {
  this.log("Setting switch to " + on);
  if (on == 1) {
     clearTimeout(this.Timer);
