@@ -9,10 +9,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/ro-56/cmd-Delay.git"
+    "url": "git://github.com/ro-56/homebridge-cmd-Delay.git"
   },
   "bugs": {
-    "url": "https://github.com/ro-56/cmd-Delay.git/issues"
+    "url": "https://github.com/ro-56/homebridge-cmd-Delay.git/issues"
   },
   "engines": {
     "node": ">=0.12.0",
