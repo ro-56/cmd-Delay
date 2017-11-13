@@ -16,15 +16,10 @@
 ]
 ```
 
-## Why do we need this plugin?
-
-
 ## How it works
 
-Basically, all you need to do is:
-1. Set the desired delay time in the config file (in milliseconds).
-2. Use this switch in any scene or automation.
-3. Set an automation to trigger when this switch is turned off.
+1. Set the command to execute.
+2. Set the desired delay time in the config file (in milliseconds).
 
 ## How to install
 
